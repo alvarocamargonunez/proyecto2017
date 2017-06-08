@@ -6,8 +6,7 @@ import json
 import requests
 
 
-
- url_base="https://api.flickr.com/services/rest"
+url_base="https://api.flickr.com/services/rest"
 
 
 @route('/')

@@ -7,7 +7,6 @@ import requests
 
 
 
- key=os.environ["key"]
  url_base="https://api.flickr.com/services/rest"
 
 
@@ -19,6 +18,7 @@ def inicio():
 @route('/busqueda',method='post')
 def busqueda():
 #variables de busqueda de la aplicacion
+	key=os.environ["key"]
 	nombre=request.forms.get('foto')
 	payload={"method":"flickr.photos.search","api_key":key,"text":nombre,"extras":"url_o,url_s","format":"json"}
 	p=requests.get(url_base,params=payload)
@@ -56,7 +56,7 @@ def busqueda():
 @route('/zona',method='post')
 def zona():
 
-	key="3d81dc5d3e3b814c444aedf077d52c1a"
+	key=os.environ["key"]
 	url_base="https://api.flickr.com/services/rest"
 	nombre1=request.forms.get('lugar')
 	payload={"method":"flickr.places.find","api_key":key,"query":nombre1,"format":"json"}
@@ -80,6 +80,7 @@ def zona():
 
 @route('/informacion', method='post')
 def informacion():
+	key=os.environ["key"]
 	ids=request.forms.get('ids')
 	payload5={"method":"flickr.photos.getInfo","api_key": key,"photo_id":ids,"format":"json"}
 	p4=requests.get(url_base,params=payload5)

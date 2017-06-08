@@ -1,14 +1,14 @@
 from sys import argv
 import bottle
-from bottle import Bottle,route,run,request,template,static_file,redirect,get,post, default_app, response, get, post
+from bottle import Bottle,route,run,request,template,static_file,redirect,get,post, default_app, response
 import os
 import json
 import requests
 
 
 
-key="3d81dc5d3e3b814c444aedf077d52c1a"
-url_base="https://api.flickr.com/services/rest"
+ key=os.environ["Key"]
+ url_base="https://api.flickr.com/services/rest"
 
 
 @route('/')

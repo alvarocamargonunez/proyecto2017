@@ -7,7 +7,7 @@ import requests
 
 
 
- key=os.environ["Key"]
+ key=os.environ["key"]
  url_base="https://api.flickr.com/services/rest"
 
 

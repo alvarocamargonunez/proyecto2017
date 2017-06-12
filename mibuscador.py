@@ -79,6 +79,7 @@ def zona():
 
 @route('/informacion', method='post')
 def informacion():
+	
 	key=os.environ["key"]
 	ids=request.forms.get('ids')
 	payload5={"method":"flickr.photos.getInfo","api_key": key,"photo_id":ids,"format":"json"}
@@ -90,6 +91,7 @@ def informacion():
 			username = documento5["photo"]["owner"]["username"]
 			realname = documento5["photo"]["owner"]["realname"]
 			url_propietario = documento5["photo"]["owner"]["nsid"]
+			titulo = documento5["photo"]["title"]
       	
 			return template("informacion.tpl", username=username, realname=realname,url_propietario=url_propietario)
 

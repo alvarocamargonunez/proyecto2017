@@ -6,17 +6,16 @@
 -->
 <html>
 	<head>
-		<title>Epilogue by TEMPLATED</title>
+		<title>Buscador De Fotografías</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/main.css"/>
 	</head>
 	<body>
 
 		<!-- Header -->
 			<header id="header" class="alt">
 				<div class="inner">
-					<h1>Epilogue</h1>
-					<p>A free responsive site template by <a href="https://templated.co">TEMPLATED</a></p>
+					<h1>Buscador De Fotografías</h1>
 				</div>
 			</header>

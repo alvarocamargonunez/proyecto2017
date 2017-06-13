@@ -6,3 +6,6 @@ packaging
 pytz
 requests
 six
+argparse
+python-http-client
+wsgiref

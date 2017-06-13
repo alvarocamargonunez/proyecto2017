@@ -1,6 +1,6 @@
+
 from sys import argv
-import bottle
-from bottle import route,template,run,static_file,error,request,redirect,response,get,post,default_app
+from bottle import route,template,run,static_file,request
 import os
 import json
 import requests
@@ -84,14 +84,14 @@ def informacion():
 	ids=request.forms.get('ids')
 	payload5={"method":"flickr.photos.getInfo","api_key": key,"photo_id":ids,"format":"json"}
 	p4=requests.get(url_base,params=payload5)
-	lista_informacion=[]
+	#lista_informacion=[]
 	if p4.status_code==200:
 		documento5=json.loads(p4.text[14:-1])
 		if documento5['photo'].has_key('id'):
 			username = documento5["photo"]["owner"]["username"]
 			realname = documento5["photo"]["owner"]["realname"]
 			url_propietario = documento5["photo"]["owner"]["nsid"]
-			titulo = documento5["photo"]["title"]
+#			titulo = documento5["photo"]["title"]
       	
 			return template("informacion.tpl", username=username, realname=realname,url_propietario=url_propietario)
 

@@ -103,7 +103,7 @@ def server_static(filepath):
 	return static_file(filepath, root='static')
 
 
-run(localhost='0.0.0.0' ,port=argv[1])
+run(host='0.0.0.0' ,port=argv[1])
 
 
 

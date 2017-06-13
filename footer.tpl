@@ -1,18 +1,22 @@
+<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.</p>
+					</footer>
 
-	<footer id="footer" role="contentinfo">
-		<!-- You're free to remove the credit link to Jayj.dk in the footer, but please, please leave it there :) -->
-		<p>
-			Copyright &copy; 2012 <a href="#">Sitename.com</a>
-			<span class="sep">|</span>
-			Design by <a href="http://jayj.dk" title="Design by Jayj.dk">Jayj.dk</a>
-		</p>
-	</footer> <!-- #footer -->
+			</div>
 
-	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="static/jquery-1.7.2.min.js"><\/script>')</script>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-	<!-- Load custom scripts -->
-	<script src="static/script.js"></script>
-</body>
+	</body>
 </html>

@@ -1,6 +1,6 @@
 from sys import argv
 import bottle
-from bottle import Bottle,route,run,request,template,static_file,redirect,get,post, default_app, response
+from bottle import route,template,run,static_file,error,request,redirect,response,get,post,default_app
 import os
 import json
 import requests

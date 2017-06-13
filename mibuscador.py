@@ -24,22 +24,26 @@ def busqueda():
 	lista_url=[]
 	codigo_foto=[]
 	lista_ids=[]
-	cont=0
+	
+	
 	if p.status_code==200:
 		documento = json.loads(p.text[14:-1])
 #nos coge la foto
 		for n in documento["photos"]["photo"]:
 			if n.has_key("url_o"):
-				lista_url.append([n['url_s'],n["url_o"],n["owner"]])
+				lista_url.append([n['url_s'],n["url_o"]])
 				
 #nos coge el propietario
 		for m in documento["photos"]["photo"]:
-			if m.has_key("id"):
-				codigo_foto.append(m['owner'])
+			if m.has_key("url_o"):
+				codigo_foto.append(m['title'])
 				
 		for g in documento["photos"]["photo"]:
 			if g.has_key("id"):
 				lista_ids.append([g["id"],g["height_s"],g["width_s"]])
+		
+		
+			 
 
 		return template("resultado.tpl",lista1=lista_url,lista2=codigo_foto,lista11=lista_ids)
 
@@ -77,13 +81,17 @@ def informacion():
 	lista_informacion=[]
 	if p4.status_code==200:
 		documento5=json.loads(p4.text[14:-1])
+		print documento5
 		if documento5['photo'].has_key('id'):
+			formato = documento5["photo"]["originalformat"]
+			alias = documento5["photo"]["owner"]["path_alias"]
 			username = documento5["photo"]["owner"]["username"]
 			realname = documento5["photo"]["owner"]["realname"]
-			url_propietario = documento5["photo"]["owner"]["nsid"]
-			titulo = documento5["photo"]["title"]
+			
+			dates = documento5["photo"]["dates"]["taken"]
+			print dates
       	
-			return template("informacion.tpl", username=username, realname=realname,url_propietario=url_propietario)
+			return template("informacion.tpl", username=username, realname=realname,dates=dates,formato=formato,alias=alias)
 
 @route('/fecha',method='post')
 def busqueda():
@@ -106,16 +114,16 @@ def busqueda():
 		for u in docum["photos"]["photo"]:
 			if u.has_key("title"):
 				titulo.append(u['title'])
-		for q in docum["photos"]["photo"]:
-			if q.has_key("id"):
-				propie.append(q['owner'])
+		
 		for f2 in docum ["photos"]["photo"]:
 			if f2.has_key("datetaken"):
 				fechas2.append(f2["datetaken"])
 		for f3 in docum ["photos"]["photo"]:
 			if f3.has_key("views"):
 				fechas3.append(f3["views"])
-
+	
+			
+			 
 
 	return template("fechas.tpl",fechas=fechas,titulo=titulo,propie=propie,fechas2=fechas2,fechas3=fechas3)
 @route('/buscapersonas',method='post')
@@ -143,6 +151,7 @@ def busqueda():
 	if p5.status_code==200:
 			
 		docume2 = json.loads(p5.text[14:-1])
+
 		
 		for p3 in docume2["photos"]["photo"]:
 			if p3.has_key("url_o"):
@@ -161,3 +170,6 @@ def server_static(filepath):
 
 run(host='0.0.0.0' ,port=argv[1])
 
+
+
+#url de la plantilla --> https://jayj.dk/html5-theme-v2/

@@ -2,6 +2,8 @@
 
     <h1>Resultados de la búsqueda</h1>
     %for n,m,g  in zip (lista1,lista2,lista11):
+        
+        <p><strong>{{m}}</strong></p>
         <p><a href="{{n[1]}}"><img src="{{n[0]}}"></a></p>
         <form action="/informacion" method="post">
             <input type="hidden" name="ids" value="{{g[0]}}"/>

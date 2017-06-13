@@ -1,11 +1,8 @@
 %include('head.tpl')
 
-		<!-- Wrapper -->
-			<div id="wrapper">
 
-				<!-- Banner -->
-					<section id="intro" class="main">
-							<h1>BUSCADOR DE FOTOS</h1>
+
+	<h1>BUSCADOR DE FOTOS</h1>
 	<form action="/busqueda" method="post">
 		<label>Nombre de la foto:</label>
 		<input type="text" name="foto" required/>
@@ -18,5 +15,18 @@
 		<input type="text" name="lugar" required/>
 		<input type="submit" value="Buscar">
 	</form>
-					</section>
+	<h1>BUSCADOR DE FOTOS POR FECHAS</h1>
+	<form action="/fecha" method="post">
+		<label>fecha:</label>
+		<input type="text" name="fecha" required/>
+		<input type="submit" value="Buscar">
+	</form>
+	<h1>BUSCADOR DE PERSONAS EN FLICKR(formato YYYY-MM-DD)</h1>
+	<form action="/buscapersonas" method="post">
+		<label>Nombre de un usuario:</label>
+		<input type="text" name="nombre" required/>
+		<input type="submit" value="Buscar">
+	</form>
+
+
 %include('footer.tpl')

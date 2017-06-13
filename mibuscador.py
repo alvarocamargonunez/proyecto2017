@@ -9,9 +9,9 @@ import requests
 url_base="https://api.flickr.com/services/rest"
 
 
-@route('/')
+@route('/',method='get')
 def inicio():
-	return template('inicio',method='get')
+	return template('inicio.tpl')
 
 
 @route('/busqueda',method='post')

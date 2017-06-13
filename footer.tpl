@@ -1,6 +1,6 @@
 <!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Licenia: Creative Commons --- Centro: I.E.S Gonzalo Nazareno --- Diseñado Por: Kevin Ariza García</p>
+						<p class="copyright">&copy; Licenia: Creative Commons --- Centro: I.E.S Gonzalo Nazareno --- Diseñado Por: Alvaro Camargo Nuñez</p>
 					</footer>
 
 			</div>

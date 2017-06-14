@@ -157,6 +157,7 @@ def busqueda():
 			if p3.has_key("url_o"):
 	
 				listadefotos.append([p3['url_s'],p3["url_o"]])
+			
 		for u2 in docume2["photos"]["photo"]:
 			if u2.has_key("title"):
 				titulofotos.append(u2['title'])	

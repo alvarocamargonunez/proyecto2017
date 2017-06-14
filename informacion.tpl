@@ -6,7 +6,7 @@
     <p><strong>NOMBRE DEL USUARIO:{{username}}</strong>
    	<p><strong>FOTOGRAFIA TOMADA:{{dates}}</strong></p>
    	<p><strong>FORMATO DE LA IMAGEN: {{formato}}</strong></p>
-    <p><strong>ALIAS DEL USUARIO:{{alias}}</strong></p> 
+    
 
    
 %include('footer.tpl')

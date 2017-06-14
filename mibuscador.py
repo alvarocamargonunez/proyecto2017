@@ -89,7 +89,7 @@ def informacion():
 			realname = documento5["photo"]["owner"]["realname"]
 			
 			dates = documento5["photo"]["dates"]["taken"]
-			print dates
+			
       	
 			return template("informacion.tpl", username=username, realname=realname,dates=dates,formato=formato,alias=alias)
 
@@ -157,7 +157,7 @@ def busqueda():
 			if p3.has_key("url_o"):
 	
 				listadefotos.append([p3['url_s'],p3["url_o"]])
-			
+
 		for u2 in docume2["photos"]["photo"]:
 			if u2.has_key("title"):
 				titulofotos.append(u2['title'])	

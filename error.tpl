@@ -1,6 +1,6 @@
 %include('head.tpl')
-
-	<p>No ha habido resultado</p>
+	<br>
+	<h1>¡¡NO HA HABIDO RESULTADOS!!. Introduzca nueva busqueda</h1>
        
         
    

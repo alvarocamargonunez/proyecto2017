@@ -131,8 +131,17 @@ def busqueda():
 	
 			
 			 
+		if len(fechas)>0:
 
-	return template("fechas.tpl",fechas=fechas,titulo=titulo,propie=propie,fechas2=fechas2,fechas3=fechas3)
+			return template("fechas.tpl",fechas=fechas,titulo=titulo,propie=propie,fechas2=fechas2,fechas3=fechas3)
+
+		else:
+			return template("error.tpl")
+
+	else:
+		return template("fechaerror.tpl")
+
+
 @route('/buscapersonas',method='post')
 def busqueda():
 #variables de busqueda de la aplicacion
@@ -168,8 +177,16 @@ def busqueda():
 		for u2 in docume2["photos"]["photo"]:
 			if u2.has_key("title"):
 				titulofotos.append(u2['title'])	
-			
-		return template("buscapersonas.tpl",buscapersonas=buscapersonas,listadefotos=listadefotos,titulofotos=titulofotos)
+		if len(listadefotos)>0:
+
+			return template("buscapersonas.tpl",buscapersonas=buscapersonas,listadefotos=listadefotos,titulofotos=titulofotos)
+		else:
+			return template("errorusuario.tpl")
+	else:	
+	
+		return template("errorusuario.tpl")		
+
+
 
 @route('/static/<filepath:path>')
 def server_static(filepath):

@@ -41,11 +41,14 @@ def busqueda():
 		for g in documento["photos"]["photo"]:
 			if g.has_key("id"):
 				lista_ids.append([g["id"],g["height_s"],g["width_s"]])
-		
-		
-			 
+
 
 		return template("resultado.tpl",lista1=lista_url,lista2=codigo_foto,lista11=lista_ids)
+	else:
+		return template("error.tpl")
+
+			 
+
 
 @route('/zona',method='post')
 

@@ -42,8 +42,12 @@ def busqueda():
 			if g.has_key("id"):
 				lista_ids.append([g["id"],g["height_s"],g["width_s"]])
 
+		if len(lista_url)>0:
 
-		return template("resultado.tpl",lista1=lista_url,lista2=codigo_foto,lista11=lista_ids)
+			return template("resultado.tpl",lista1=lista_url,lista2=codigo_foto,lista11=lista_ids)
+		else:
+			return template("error.tpl")
+
 	else:
 		return template("error.tpl")
 
